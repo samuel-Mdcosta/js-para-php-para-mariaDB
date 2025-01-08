@@ -50,7 +50,7 @@
             $stmt->bindParam(':serie', $serie);
 
             if($stmt->execute()){
-                echo json_encode(['status' => 'success', 'message' => 'Dados inseridos com sucesso']);
+                echo json_encode(['status' => 'success', 'message' => 'dados enviados para o banco']);
             } else {
                 echo json_encode(['status' => 'error', 'message' => 'Erro ao inserir dados']);
             }
