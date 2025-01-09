@@ -21,14 +21,14 @@ function enviar(){
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
         }
-        return response.text(); // Change to text to inspect the raw response
+        return response.text(); 
     })
     .then(text => {
         try {
-            const data = JSON.parse(text); // Try to parse the text as JSON
+            const data = JSON.parse(text); //muda o texto para JSON
             console.log('Success:', data);
         } catch (error) {
-            console.error('Error parsing JSON:', error, text); // Log the error and the raw response
+            console.error('Error parsing JSON:', error, text); //imprime o erro e o texto em json
         }
     })
     .catch((error) => {
